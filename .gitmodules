@@ -1,0 +1,3 @@
+[submodule "Externals/yoga"]
+	path = Externals/yoga
+	url = https://github.com/facebook/yoga.git

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios' display-mode='raw'>
+    <pages>
+        <page name='Example'/>
+        <page name='FlexDirection'/>
+        <page name='FlexWrap'/>
+        <page name='JustifyContent'/>
+        <page name='AlignItems'/>
+        <page name='AlignContent'/>
+        <page name='AlignSelf'/>
+        <page name='FlexGrow'/>
+        <page name='FlexShrink'/>
+        <page name='FlexBasis'/>
+        <page name='Direction'/>
+        <page name='Overflow'/>
+        <page name='PositionType'/>
+        <page name='Edges'/>
+        <page name='Measure'/>
+    </pages>
+</playground>

@@ -15,6 +15,7 @@
         <page name='Overflow'/>
         <page name='PositionType'/>
         <page name='Edges'/>
+        <page name='MinSize'/>
         <page name='Measure'/>
     </pages>
 </playground>

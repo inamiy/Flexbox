@@ -20,6 +20,7 @@
 		1F7A07F31E1A97AB0097A3D6 /* YGNodeList.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F7A07D61E1A977A0097A3D6 /* YGNodeList.h */; };
 		1F7A07F41E1A97B00097A3D6 /* YGEnums.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F7A07D31E1A977A0097A3D6 /* YGEnums.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1F7A07F51E1A97DA0097A3D6 /* YGMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F7A07D41E1A977A0097A3D6 /* YGMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1F8717E71E4716CC00B6582C /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8717E61E4716CC00B6582C /* Helpers.swift */; };
 		48FB18B11DD584520027B8B1 /* Flexbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48FB18A71DD584520027B8B1 /* Flexbox.framework */; };
 		48FB18B81DD584520027B8B1 /* Flexbox.h in Headers */ = {isa = PBXBuildFile; fileRef = 48FB18AA1DD584520027B8B1 /* Flexbox.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
@@ -51,6 +52,7 @@
 		1F7A07D61E1A977A0097A3D6 /* YGNodeList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YGNodeList.h; sourceTree = "<group>"; };
 		1F7A07D71E1A977A0097A3D6 /* Yoga.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Yoga.c; sourceTree = "<group>"; };
 		1F7A07D81E1A977A0097A3D6 /* Yoga.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Yoga.h; sourceTree = "<group>"; };
+		1F8717E61E4716CC00B6582C /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		48FB18A71DD584520027B8B1 /* Flexbox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Flexbox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		48FB18AA1DD584520027B8B1 /* Flexbox.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Flexbox.h; sourceTree = "<group>"; };
 		48FB18AB1DD584520027B8B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				48FB18AA1DD584520027B8B1 /* Flexbox.h */,
 				1F7A05F41E1A93620097A3D6 /* NodeImpl.h */,
 				1F7A05F51E1A93620097A3D6 /* NodeImpl.m */,
+				1F8717E61E4716CC00B6582C /* Helpers.swift */,
 				1F7A05F31E1A93620097A3D6 /* Node.swift */,
 				1F7A05F61E1A93620097A3D6 /* Style.swift */,
 				1F7A05EF1E1A93620097A3D6 /* Edges.swift */,
@@ -307,6 +310,7 @@
 				1F7A05FE1E1A93620097A3D6 /* Style.swift in Sources */,
 				1F7A05FD1E1A93620097A3D6 /* NodeImpl.m in Sources */,
 				1F7A07F11E1A97A20097A3D6 /* Yoga.c in Sources */,
+				1F8717E71E4716CC00B6582C /* Helpers.swift in Sources */,
 				1F7A05FB1E1A93620097A3D6 /* Node.swift in Sources */,
 				1F7A05F71E1A93620097A3D6 /* Edges.swift in Sources */,
 				1F7A05F91E1A93620097A3D6 /* Layout.swift in Sources */,

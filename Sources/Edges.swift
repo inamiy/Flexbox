@@ -28,12 +28,12 @@ public struct Edges
 
 extension Edges: Equatable
 {
-    public static func == (lhs: Edges, rhs: Edges) -> Bool
+    public static func == (l: Edges, r: Edges) -> Bool
     {
-        if lhs.left != rhs.left { return false }
-        if lhs.right != rhs.right { return false }
-        if lhs.top != rhs.top { return false }
-        if lhs.bottom != rhs.bottom { return false }
+        if !_isCGFloatEqual(l.left, r.left) { return false }
+        if !_isCGFloatEqual(l.right, r.right) { return false }
+        if !_isCGFloatEqual(l.top, r.top) { return false }
+        if !_isCGFloatEqual(l.bottom, r.bottom) { return false }
 
         return true
     }

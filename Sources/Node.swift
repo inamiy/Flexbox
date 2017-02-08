@@ -216,29 +216,34 @@ public struct Node
 
 extension Node: Equatable
 {
-    public static func == (lhs: Node, rhs: Node) -> Bool
+    public static func == (l: Node, r: Node) -> Bool
     {
-        if lhs.size != rhs.size { return false }
-        if lhs.minSize != rhs.minSize { return false }
-        if lhs.maxSize != rhs.maxSize { return false }
-        if lhs.children != rhs.children { return false }
-        if lhs.flexDirection != rhs.flexDirection { return false }
-        if lhs.flexWrap != rhs.flexWrap { return false }
-        if lhs.justifyContent != rhs.justifyContent { return false }
-        if lhs.alignContent != rhs.alignContent { return false }
-        if lhs.alignItems != rhs.alignItems { return false }
-        if lhs.alignSelf != rhs.alignSelf { return false }
-        if lhs.flex != rhs.flex { return false }
-        if lhs.flexGrow != rhs.flexGrow { return false }
-        if lhs.flexShrink != rhs.flexShrink { return false }
-        if lhs.flexBasis != rhs.flexBasis { return false }
-        if lhs.direction != rhs.direction { return false }
-        if lhs.overflow != rhs.overflow { return false }
-        if lhs.positionType != rhs.positionType { return false }
-        if lhs.position != rhs.position { return false }
-        if lhs.margin != rhs.margin { return false }
-        if lhs.padding != rhs.padding { return false }
-        if lhs.border != rhs.border { return false }
+        if !_isCGSizeEqual(l.size, r.size) { return false }
+        if !_isCGSizeEqual(l.minSize, r.minSize) { return false }
+        if !_isCGSizeEqual(l.maxSize, r.maxSize) { return false }
+
+        if l.flexDirection != r.flexDirection { return false }
+        if l.flexWrap != r.flexWrap { return false }
+        if l.justifyContent != r.justifyContent { return false }
+        if l.alignContent != r.alignContent { return false }
+        if l.alignItems != r.alignItems { return false }
+        if l.alignSelf != r.alignSelf { return false }
+
+        if !_isCGFloatEqual(l.flex, r.flex) { return false }
+        if !_isCGFloatEqual(l.flexGrow, r.flexGrow) { return false }
+        if !_isCGFloatEqual(l.flexShrink, r.flexShrink) { return false }
+        if !_isCGFloatEqual(l.flexBasis, r.flexBasis) { return false }
+
+        if l.direction != r.direction { return false }
+        if l.overflow != r.overflow { return false }
+        if l.positionType != r.positionType { return false }
+
+        if l.position != r.position { return false }
+        if l.margin != r.margin { return false }
+        if l.padding != r.padding { return false }
+        if l.border != r.border { return false }
+
+        if l.children != r.children { return false }
 
         return true
     }

@@ -42,19 +42,6 @@ public enum Style
     }
 
     /// ## CSS spec
-    /// - Value:    flex-start | flex-end | center | space-between | space-around | stretch
-    /// - Initial:    stretch
-    /// - Applies to:    multi-line flex containers
-    public enum AlignContent: UInt32
-    {
-        case auto = 0       // only in facebook/yoga
-        case flexStart = 1
-        case center = 2
-        case flexEnd = 3
-        case stretch = 4    // only in facebook/yoga
-    }
-
-    /// ## CSS spec
     /// - Value:    flex-start | flex-end | center | baseline | stretch
     /// - Initial:    stretch
     /// - Applies to:    flex containers
@@ -66,6 +53,19 @@ public enum Style
         case flexEnd = 3
         case stretch = 4
         // case baseline    // not in facebook/yoga
+    }
+
+    /// ## CSS spec
+    /// - Value:    flex-start | flex-end | center | space-between | space-around | stretch
+    /// - Initial:    stretch
+    /// - Applies to:    multi-line flex containers
+    public enum AlignContent: UInt32
+    {
+        case auto = 0       // only in facebook/yoga
+        case flexStart = 1
+        case center = 2
+        case flexEnd = 3
+        case stretch = 4    // only in facebook/yoga
     }
 
     /// ## CSS spec

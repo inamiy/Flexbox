@@ -5,70 +5,70 @@ import Foundation
 /// - https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout
 public struct Node
 {
-    public let size: CGSize
-    public let minSize: CGSize
-    public let maxSize: CGSize
+    public var size: CGSize
+    public var minSize: CGSize
+    public var maxSize: CGSize
 
-    public let children: [Node]
+    public var children: [Node]
 
     /// Specifies how flex-items are placed in the flex-container (defining the main-axis).
     /// - Note: Applies to flex-container.
-    public let flexDirection: Style.FlexDirection
+    public var flexDirection: Style.FlexDirection
 
     /// Specifies whether flex items are forced into a single line 
     /// or can be wrapped onto multiple lines.
     /// - Note: Applies to flex-container.
-    public let flexWrap: Style.FlexWrap
+    public var flexWrap: Style.FlexWrap
 
     /// Distributes space between and around flex-items along the main-axis.
     /// - Note: Applies to flex-container.
-    public let justifyContent: Style.JustifyContent
+    public var justifyContent: Style.JustifyContent
 
     /// Distributes space between and around flex-items along the cross-axis. 
     /// This works like `justifyContent` but in the perpendicular direction.
     /// - Note: Applies to flex-container.
-    public let alignItems: Style.AlignItems
-
-    /// Aligns self (flex-item) by overriding it's parent's (flex-container) `alignItems`.
-    /// - Note: Applies to flex-item.
-    public let alignSelf: Style.AlignSelf
+    public var alignItems: Style.AlignItems
 
     /// Aligns a flex-container's lines when there is extra space on the cross-axis.
     /// - Warning: This property has no effect on single line.
     /// - Note: Applies to multi-line flex-container (no `FlexWrap.nowrap`).
-    public let alignContent: Style.AlignContent
+    public var alignContent: Style.AlignContent
+
+    /// Aligns self (flex-item) by overriding it's parent's (flex-container) `alignItems`.
+    /// - Note: Applies to flex-item.
+    public var alignSelf: Style.AlignSelf
 
     /// Shorthand property specifying the ability of a flex-item 
     /// to alter its dimensions to fill available space.
     /// - Note: Applies to flex-item.
-    public let flex: CGFloat
+    public var flex: CGFloat
 
     /// Grow factor of a flex-item.
     /// - Note: Applies to flex-item.
-    public let flexGrow: CGFloat
+    public var flexGrow: CGFloat
 
     /// Shrink factor of a flex-item.
     /// - Note: Applies to flex-item.
-    public let flexShrink: CGFloat
+    public var flexShrink: CGFloat
 
     /// Initial main size of a flex item.
     /// - Note: Applies to flex-item.
-    public let flexBasis: CGFloat
+    public var flexBasis: CGFloat
 
-    public let direction: Style.Direction
-    public let overflow: Style.Overflow
-    public let positionType: Style.PositionType
+    public var direction: Style.Direction
+    public var overflow: Style.Overflow
+    public var positionType: Style.PositionType
 
     /// CSS's (top, right, bottom, left) that works with `positionType = .absolute`.
-    public let position: Edges
+    public var position: Edges
 
-    public let margin: Edges
-    public let padding: Edges
+    public var margin: Edges
+    public var padding: Edges
 
     /// facebook/yoga implementation that mostly works as same as `padding`.
-    public let border: Edges
+    public var border: Edges
 
-    public let measure: ((CGSize) -> CGSize)?
+    public var measure: ((CGSize) -> CGSize)?
 
     /// - Note: See `gYGNodeDefaults.style`.
     public init(
@@ -81,8 +81,8 @@ public struct Node
         flexDirection: Style.FlexDirection = .row,
         flexWrap: Style.FlexWrap = .nowrap,
         justifyContent: Style.JustifyContent = .flexStart,
-        alignContent: Style.AlignContent = .stretch,
         alignItems: Style.AlignItems = .stretch,
+        alignContent: Style.AlignContent = .stretch,
         alignSelf: Style.AlignSelf = .auto,
 
         flex: CGFloat = .nan,       // CSS default = 0
@@ -111,8 +111,8 @@ public struct Node
         self.flexDirection = flexDirection
         self.flexWrap = flexWrap
         self.justifyContent = justifyContent
-        self.alignContent = alignContent
         self.alignItems = alignItems
+        self.alignContent = alignContent
         self.alignSelf = alignSelf
 
         self.flex = flex
@@ -211,6 +211,14 @@ public struct Node
         node.children = children.map { $0._createUnderlyingNode() }
 
         return node
+    }
+}
+
+extension Node: InoutMutable
+{
+    public static func emptyInit() -> Node
+    {
+        return self.init()
     }
 }
 

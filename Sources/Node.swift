@@ -206,9 +206,14 @@ public struct Node
 
         if let measure = self.measure {
             node.measure = measure
-        }
 
-        node.children = children.map { $0._createUnderlyingNode() }
+            // Cannot add child: Nodes with measure functions cannot have children
+            // (All children will be ignored).
+            node.children = []
+        }
+        else {
+            node.children = children.map { $0._createUnderlyingNode() }
+        }
 
         return node
     }

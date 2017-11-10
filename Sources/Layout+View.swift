@@ -20,7 +20,7 @@ extension Layout
     }
 #elseif os(macOS)
     /// Apply the layout to the given view hierarchy.
-    public func apply(_ view: NSView, scale: CGFloat = NSScreen.main()?.backingScaleFactor ?? 1)
+    public func apply(_ view: NSView, scale: CGFloat = NSScreen.main?.backingScaleFactor ?? 1)
     {
         view.frame = _roundPixel(frame, scale: scale)
 

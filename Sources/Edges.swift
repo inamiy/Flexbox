@@ -22,8 +22,8 @@ public struct Edges
         self.bottom = uniform
     }
 
-    static let zero = Edges(uniform: 0)
-    static let undefined = Edges(uniform: .nan)
+    public static let zero = Edges(uniform: 0)
+    public static let undefined = Edges(uniform: .nan)
 }
 
 extension Edges: Equatable
